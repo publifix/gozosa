@@ -187,7 +187,10 @@ h3 {
   border-radius: var(--radius-pill);
 }
 
-.on-dark .kicker { color: var(--color-oro); }
+.on-dark .kicker {
+  color: var(--color-oro);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
 
 .section-intro {
   max-width: 640px;
@@ -398,7 +401,9 @@ h3 {
     padding-block: var(--space-2);
   }
 
-  .site-header:not(.is-solid) .main-nav__link { color: var(--color-carbon); }
+  .site-header:not(.is-solid) .main-nav__link {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+  }
 
   .main-nav__link::after {
     content: '';
@@ -457,7 +462,8 @@ h3 {
   width: 100%;
   height: 2.5px;
   border-radius: var(--radius-pill);
-  background: var(--color-carbon);
+  background: var(--color-crema);
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.45));
   transition: transform var(--dur-base) var(--ease-out-expo),
               opacity var(--dur-fast) var(--ease-out-soft),
               top var(--dur-base) var(--ease-out-expo);
@@ -523,12 +529,18 @@ h3 {
 
 .nav-drawer__body {
   flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: var(--space-4);
-  padding: var(--space-5) var(--space-6) var(--space-8);
+  padding: var(--space-6) var(--space-6) var(--space-8);
   overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media (max-height: 700px), (max-width: 380px) {
+  .nav-drawer__body { justify-content: flex-start; }
 }
 
 .nav-drawer__link {
@@ -599,7 +611,7 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(33,28,22,0.55) 0%, rgba(33,28,22,0.25) 30%, rgba(33,28,22,0.55) 72%, rgba(33,28,22,0.88) 100%);
+    linear-gradient(180deg, rgba(20,16,12,0.68) 0%, rgba(20,16,12,0.48) 35%, rgba(20,16,12,0.62) 65%, rgba(20,16,12,0.92) 100%);
 }
 
 .hero__content {
@@ -613,13 +625,15 @@ h3 {
   color: var(--color-crema);
   max-width: 15ch;
   text-wrap: balance;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
 }
 
 .hero__subtitle {
   margin-top: var(--space-4);
   max-width: 46ch;
   font-size: clamp(1rem, 0.94rem + 0.3vw, 1.2rem);
-  color: rgba(239, 234, 224, 0.92);
+  color: rgba(239, 234, 224, 0.95);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero__cta-group {
