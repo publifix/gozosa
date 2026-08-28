@@ -1,55 +1,1103 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gozosa — Restaurant &amp; Bar</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #1a1410;
-      --fg: #f5ece0;
-      --accent: #d4a24e;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: "Georgia", "Times New Roman", serif;
-      text-align: center;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-      letter-spacing: 0.05em;
-      margin: 0;
-      color: var(--accent);
-    }
-    p {
-      font-size: 1.1rem;
-      max-width: 32rem;
-      line-height: 1.6;
-      margin: 0;
-    }
-    .tag {
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
-      font-size: 0.8rem;
-      color: var(--fg);
-      opacity: 0.7;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gozosa — La Mejor Fonda de San Luis Potosí | Villa de Pozos</title>
+<meta name="description" content="Gozosa: fonda mexicana fusión en Villa de Pozos, S.L.P. Ambiente familiar, música en vivo y un menú extenso: antojitos, parrilla, pizza y coctelería.">
+<meta name="keywords" content="restaurante San Luis Potosí, fonda mexicana, Villa de Pozos, cocina mexicana fusión, cortes a la parrilla SLP, música en vivo restaurante, bar SLP, Gozosa">
+<meta name="author" content="Gozosa">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://publifix.github.io/gozosa/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Gozosa — La Mejor Fonda de San Luis Potosí">
+<meta property="og:description" content="Cocina mexicana fusión, ambiente familiar y música en vivo, en el corazón de Villa de Pozos, San Luis Potosí.">
+<meta property="og:image" content="https://publifix.github.io/gozosa/assets/img/og/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://publifix.github.io/gozosa/">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Gozosa">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gozosa — La Mejor Fonda de San Luis Potosí">
+<meta name="twitter:description" content="Cocina mexicana fusión, ambiente familiar y música en vivo, en el corazón de Villa de Pozos, San Luis Potosí.">
+<meta name="twitter:image" content="https://publifix.github.io/gozosa/assets/img/og/og-image.jpg">
+
+<!-- Favicons / PWA -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/brand/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#C42B28">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+
+<link rel="preload" as="image" href="/assets/img/hero/hero-panuchos-cochinita-1600.jpg" fetchpriority="high">
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- JSON-LD: Restaurant -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Gozosa",
+  "image": "https://publifix.github.io/gozosa/assets/img/og/og-image.jpg",
+  "@id": "https://publifix.github.io/gozosa/",
+  "url": "https://publifix.github.io/gozosa/",
+  "telephone": "+524442011280",
+  "email": "gozosafondaslp@gmail.com",
+  "servesCuisine": "Mexican",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "C. Julián de los Reyes 348, Villa de Pozos",
+    "addressLocality": "Pozos",
+    "addressRegion": "SLP",
+    "postalCode": "78421",
+    "addressCountry": "MX"
+  },
+  "menu": "https://publifix.github.io/gozosa/#menu",
+  "sameAs": [
+    "https://www.instagram.com/gozosaslp",
+    "https://www.facebook.com/GozosaSLP",
+    "https://www.tiktok.com/@gozosaslp"
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "12:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday"], "opens": "12:00", "closes": "23:59" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "23:59" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "18:00" }
+  ]
+}
+</script>
+<!--
+  VERIFICAR: el menú impreso del negocio muestra un horario distinto:
+  Lunes a Miércoles 12:00–23:00, Jueves a Sábado 12:00–00:00, Domingo 13:00–19:00.
+  Se usa el horario del brief como fuente primaria (arriba, dentro del JSON-LD).
+  Confirmar con el negocio antes de publicar la versión definitiva.
+-->
 </head>
 <body>
-  <span class="tag">Restaurant &amp; Bar</span>
-  <h1>Gozosa</h1>
-  <p>Sitio en construcción. Este espacio se irá actualizando con cada avance del proyecto.</p>
+
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- =========================================================
+     HEADER — logotipo único, sticky, hide-on-scroll, transparente→sólido
+     ========================================================= -->
+<header class="site-header" id="header">
+  <div class="site-header__inner">
+    <a href="#inicio" class="brand-logo" aria-label="Gozosa — Inicio">
+      <picture>
+        <source type="image/webp" srcset="/assets/img/brand/logo-120.webp 120w, /assets/img/brand/logo-180.webp 180w, /assets/img/brand/logo-240.webp 240w" sizes="48px">
+        <img class="brand-logo__mark" src="/assets/img/brand/logo-180.png" srcset="/assets/img/brand/logo-120.png 120w, /assets/img/brand/logo-180.png 180w, /assets/img/brand/logo-240.png 240w" sizes="48px" alt="Gozosa — Fonda Mexicana, Villa de Pozos" width="120" height="178">
+      </picture>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a class="main-nav__link" href="#inicio">Inicio</a>
+      <a class="main-nav__link" href="#nosotros">Nosotros</a>
+      <a class="main-nav__link" href="#menu">Menú</a>
+      <a class="main-nav__link" href="#promociones">Promociones</a>
+      <a class="main-nav__link" href="#ambiente">Ambiente</a>
+      <a class="main-nav__link" href="#ubicacion">Ubicación</a>
+      <a class="main-nav__link" href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn--primary" href="https://wa.me/524442011280" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        <span>Reservar</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Abrir menú de navegación">
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Drawer mobile — overlay siempre sólido -->
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer__top">
+    <span class="visually-hidden">Menú de navegación</span>
+    <button class="nav-drawer__close" id="navDrawerClose" aria-label="Cerrar menú de navegación">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav class="nav-drawer__body" aria-label="Navegación móvil">
+    <a class="nav-drawer__link" href="#inicio">Inicio</a>
+    <a class="nav-drawer__link" href="#nosotros">Nosotros</a>
+    <a class="nav-drawer__link" href="#menu">Menú</a>
+    <a class="nav-drawer__link" href="#promociones">Promociones</a>
+    <a class="nav-drawer__link" href="#ambiente">Ambiente</a>
+    <a class="nav-drawer__link" href="#ubicacion">Ubicación</a>
+    <a class="nav-drawer__link" href="#contacto">Contacto</a>
+    <a class="btn btn--gold nav-drawer__cta" href="https://wa.me/524442011280" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+  </nav>
+</div>
+
+<main id="main">
+
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
+  <section class="hero" id="inicio">
+    <div class="hero__media">
+      <picture>
+        <source type="image/webp" srcset="/assets/img/hero/hero-panuchos-cochinita-640.webp 640w, /assets/img/hero/hero-panuchos-cochinita-1024.webp 1024w, /assets/img/hero/hero-panuchos-cochinita-1600.webp 1600w, /assets/img/hero/hero-panuchos-cochinita-2048.webp 2048w" sizes="100vw">
+        <img src="/assets/img/hero/hero-panuchos-cochinita-1600.jpg" srcset="/assets/img/hero/hero-panuchos-cochinita-640.jpg 640w, /assets/img/hero/hero-panuchos-cochinita-1024.jpg 1024w, /assets/img/hero/hero-panuchos-cochinita-1600.jpg 1600w, /assets/img/hero/hero-panuchos-cochinita-2048.jpg 2048w" sizes="100vw" alt="Panuchos de cochinita pibil y coctel de la casa servidos en mesa de talavera en Gozosa" fetchpriority="high" loading="eager" decoding="sync">
+      </picture>
+      <div class="hero__scrim" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero__content container">
+      <p class="kicker on-dark">Fonda · Restaurante · Bar · San Luis Potosí</p>
+      <h1 class="hero__title">Conoce la mejor fonda de S.L.P.</h1>
+      <p class="hero__subtitle">Cocina mexicana fusión, ambiente familiar y música en vivo, en el corazón de Villa de Pozos.</p>
+      <div class="hero__cta-group">
+        <a class="btn btn--primary" href="https://wa.me/524442011280" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          <span>Reservar por WhatsApp</span>
+        </a>
+        <a class="btn btn--outline" href="#menu">Ver el menú</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll-cue" aria-hidden="true">
+      <span>Descubre más</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SOBRE GOZOSA
+       ========================================================= -->
+  <section class="section section--crema" id="nosotros">
+    <div class="container about">
+      <div class="about__media" data-reveal>
+        <picture>
+          <source type="image/webp" srcset="/assets/img/sobre/sobre-interior-fonda-480.webp 480w, /assets/img/sobre/sobre-interior-fonda-768.webp 768w, /assets/img/sobre/sobre-interior-fonda-1080.webp 1080w" sizes="(min-width: 900px) 45vw, 90vw">
+          <img src="/assets/img/sobre/sobre-interior-fonda-1080.jpg" srcset="/assets/img/sobre/sobre-interior-fonda-480.jpg 480w, /assets/img/sobre/sobre-interior-fonda-768.jpg 768w, /assets/img/sobre/sobre-interior-fonda-1080.jpg 1080w" sizes="(min-width: 900px) 45vw, 90vw" alt="Interior de Gozosa: comedor cálido con cortinas rojas y ambiente familiar" loading="lazy" decoding="async" width="1080" height="1350">
+        </picture>
+        <span class="about__badge">Fonda tradicional + toque moderno</span>
+      </div>
+      <div class="about__body">
+        <p class="kicker" data-reveal>Sobre Nosotros</p>
+        <h2 data-reveal>Fonda tradicional, con un toque moderno</h2>
+        <p data-reveal>Gozosa es un restaurante-bar de cocina mexicana en Villa de Pozos, San Luis Potosí, que fusiona la fonda tradicional con un toque contemporáneo. Ambiente familiar, música en vivo y un menú extenso que va de la carne asada a la pizza, pasando por antojitos, cortes a la parrilla y coctelería.</p>
+        <div class="about__stats" data-reveal-group>
+          <div class="about__stat" data-reveal><strong>13+</strong><span>Categorías de menú</span></div>
+          <div class="about__stat" data-reveal><strong>100%</strong><span>Ambiente familiar</span></div>
+          <div class="about__stat" data-reveal><strong>Vivo</strong><span>Música en cada visita</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       MENÚ
+       ========================================================= -->
+  <section class="section section--surface" id="menu">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker" data-reveal>Menú</p>
+        <h2 data-reveal>Todo lo que se antoja en Gozosa</h2>
+        <div class="section-intro menu-intro" data-reveal>
+          <p>De los antojitos a los cortes a la parrilla, el menú de Gozosa tiene algo para cada ocasión.</p>
+        </div>
+      </div>
+
+      <div class="menu-accordion" role="presentation">
+
+        <!-- 1. Entradas -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-entradas" id="tab-entradas">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">01</span>
+              <span class="menu-category__title">Entradas</span>
+              <span class="menu-category__count">5 platillos</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-entradas" role="region" aria-labelledby="tab-entradas">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Guacamole con Chicharrón Durito</p><p class="menu-item__desc">Perfecto para botanear.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$110</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Queso Asadero Fundido</p><p class="menu-item__desc">Al natural o con chorizo.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line"><small>Natural</small>$159</span><span class="menu-item__price-line"><small>Con chorizo</small>$179</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Alitas</p><p class="menu-item__desc">500 gr, sabor bbq, mango habanero, adobadas o búfalo, con zanahoria, apio y ranch.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line"><small>500 gr</small>$269</span><span class="menu-item__price-line"><small>1 kg</small>$529</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Ignacios</p><p class="menu-item__desc">Totopos con queso amarillo, chorizo, frijoles negros, elote, chilitos y cebolla morada.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$179</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Orden de Cochinita Pibil</p><p class="menu-item__desc">200 gr, receta yucateca, con aguacate, frijoles negros y cebollita desflemada.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$245</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Ensaladas -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-ensaladas" id="tab-ensaladas">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">02</span>
+              <span class="menu-category__title">Ensaladas</span>
+              <span class="menu-category__count">4 platillos</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-ensaladas" role="region" aria-labelledby="tab-ensaladas">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Ensalada de Nopalitos</p><p class="menu-item__desc">Pico de gallo, queso ranchero y totopos.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$95</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Vegetales Asados</p><p class="menu-item__desc">Champiñones, zanahoria, papa, nopalitos y cebolla.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$95</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Ensalada Gozosa</p><p class="menu-item__desc">Lechuga sangría, huevo duro, queso panela, jitomate, aguacate, vinagreta y pimientos con tocino.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$168</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Ensalada Italiana</p><p class="menu-item__desc">Lechuga, aceitunas, jitomate, panela, cherry, albahaca y chimichurri.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$170</span></div>
+                </li>
+              </ul>
+              <p class="menu-category__note">Agrega pollo a la plancha o arrachera (90 gr) a cualquier ensalada por $98.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Sopas -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-sopas" id="tab-sopas">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">03</span>
+              <span class="menu-category__title">Sopas</span>
+              <span class="menu-category__count">4 platillos</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-sopas" role="region" aria-labelledby="tab-sopas">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Caldo Tlalpeño</p><p class="menu-item__desc">Caldo rojo con chipotle, pollo, aguacate, verduras y queso panela.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$98</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Sopita Aguada</p><p class="menu-item__desc">Fideos, frijolitos negros, chicharrón durito y crema.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$88</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Sopa de Pollo</p><p class="menu-item__desc">Pechuga desmenuzada, huevo duro, queso, arroz y aguacate.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$134</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Sopa de Tortilla</p><p class="menu-item__desc">Queso, frituras, aguacate, crema y chicharrón durito.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$90</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Antojitos -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-antojitos" id="tab-antojitos">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">04</span>
+              <span class="menu-category__title">Antojitos</span>
+              <span class="menu-category__count">8 platillos</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-antojitos" role="region" aria-labelledby="tab-antojitos">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Panuchos de Cochinita</p><p class="menu-item__desc">2 pzs, pan de maíz con frijol, cebolla morada X'nipec, aguacate y queso fresco.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$155</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Enchiladas Potosinas</p><p class="menu-item__desc">6 pzs, con guacamole, frijolitos, crema y queso.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$158</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Flautas</p><p class="menu-item__desc">6 pzs, pollo, lechuga, jitomate, cebolla, queso y crema.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$129</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Doraditas de Papa</p><p class="menu-item__desc">4 pza, con espejo de caldillo, lechuga, jitomate y crema.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$115</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Pozole Rojo</p><p class="menu-item__desc">Disponible en dos tamaños.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line"><small>Chico</small>$125</span><span class="menu-item__price-line"><small>Grande</small>$169</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Orden de Quesabirrias</p><p class="menu-item__desc">3 pzs.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$179</span></div>
+                </li>
+                <li class="menu-item">
+                  <!-- VERIFICAR: confirmar con el negocio si la presentación correcta es de 4 o 5 piezas -->
+                  <div class="menu-item__info"><p class="menu-item__name">Taquitos Rojos</p><p class="menu-item__desc">5 pzs, chile rojo no picante, con papa y zanahoria salteadas.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$130</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Enmoladas de Pollo</p><p class="menu-item__desc">4 pzs, mole de la casa, crema y ajonjolí.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$165</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Plato de Antojitos y más -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-plato-antojitos" id="tab-plato-antojitos">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">05</span>
+              <span class="menu-category__title">Plato de Antojitos y más</span>
+              <span class="menu-category__count">4 platillos</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-plato-antojitos" role="region" aria-labelledby="tab-plato-antojitos">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Plato de Antojitos</p><p class="menu-item__desc">2 tlacoyos, 2 taquitos dorados, 2 quesadillas fritas, chicharrón rojo prensado y guacamole. Disponible sábado y domingo.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$210</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Orden de Carnitas</p><p class="menu-item__desc">250 gr, con tortillas, cilantro y cebollita.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$195</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Tlacoyos</p><p class="menu-item__desc">Empanadas de maíz con queso asadero, frijolitos, guacamole, chicharrón prensado, crema y queso.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$165</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Pollito Chicken Boneless</p><p class="menu-item__desc">Marinado y empanizado, ranch y bbq, con papas a la francesa.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line"><small>150 gr</small>$175</span><span class="menu-item__price-line"><small>500 gr</small>$428</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. De Res -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-de-res" id="tab-de-res">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">06</span>
+              <span class="menu-category__title">De Res</span>
+              <span class="menu-category__count">6 platillos</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-de-res" role="region" aria-labelledby="tab-de-res">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Carne Asada</p><p class="menu-item__desc">200 gr sirloin, frijoles de la olla, guacamole y pico de gallo.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$220</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Plato Andariego</p><p class="menu-item__desc">Bistec guisado con nopales, cebolla, jitomate, chipotle, queso asadero, frijoles negros y chile serrano.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$239</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Tacos Húngaros</p><p class="menu-item__desc">Chiles húngaros rellenos de arrachera y choriqueso, huarache de maíz, guacamole, pico de gallo y cebolla desflemada.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$220</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Cecina Huasteca</p><p class="menu-item__desc">Con enchiladas potosinas (5 pza), frijoles refritos, guacamole, queso, cebolla y crema.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$265</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Birria</p><p class="menu-item__desc">Carne de res adobada, caldo de chiles y 2 quesabirrias.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$249</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Hamburguesa</p><p class="menu-item__desc">160 gr de carne, queso, tocino, lechuga, jitomate, aguacate, cebollita asada y papas a la francesa.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line"><small>Tradicional</small>$229</span><span class="menu-item__price-line"><small>Mexicana</small>$249</span><span class="menu-item__price-line"><small>Hawaiana</small>$249</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Fuertes de Res o Pollo -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-fuertes-res-pollo" id="tab-fuertes-res-pollo">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">07</span>
+              <span class="menu-category__title">Fuertes de Res o Pollo</span>
+              <span class="menu-category__count">4 platillos</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-fuertes-res-pollo" role="region" aria-labelledby="tab-fuertes-res-pollo">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Milanesa</p><p class="menu-item__desc">Empanizada, pollo o res; tradicional, con salsa de queso amarillo y jalapeño, o napolitana. Guarnición a escoger.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$219</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Huarache de Res o Pollo</p><p class="menu-item__desc">Frijoles refritos, lechuga, carne, crema, queso, cebolla y salsa de martajada.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$185</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Buerrísimo</p><p class="menu-item__desc">Burrito gigante con frijoles refritos, pico de gallo, costra de queso, caldillo, aguacate y papas a la francesa.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line"><small>De pollo</small>$259</span><span class="menu-item__price-line"><small>De arrachera</small>$278</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Alambre</p><p class="menu-item__desc">Pollo, arrachera, tocino, cebollita, queso asadero y chile poblano en tortilla de harina.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$225</span></div>
+                </li>
+              </ul>
+              <div class="menu-subgroup">Menú infantil</div>
+              <ul class="menu-items">
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Nuggets</p><p class="menu-item__desc">Incluye juguito, helado y papas a la francesa.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$110</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Mini Pizza</p><p class="menu-item__desc">Incluye juguito, helado y papas a la francesa.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$110</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Fuertes de Pollo -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-fuertes-pollo" id="tab-fuertes-pollo">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">08</span>
+              <span class="menu-category__title">Fuertes de Pollo</span>
+              <span class="menu-category__count">4 platillos</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-fuertes-pollo" role="region" aria-labelledby="tab-fuertes-pollo">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Mole con Pollo</p><p class="menu-item__desc">Receta original del mole de Pozos, con arroz y frijoles.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$195</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Pollo Mezquite</p><p class="menu-item__desc">Pechuga rellena de queso asadero con chistorra, salsa de elote, cebolla morada, jitomate y nopales asados.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$215</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Pollo "El Camino"</p><p class="menu-item__desc">Pechuga rellena de queso crema y tocino, costra crocante, salsa de queso amarillo y jalapeño, puré de papa.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$228</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Enchiladas Suizas</p><p class="menu-item__desc">Pollo y queso, salsa de poblano, elote amarillo, crema y papas a la francesa.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$228</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. A la Parrilla -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-parrilla" id="tab-parrilla">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">09</span>
+              <span class="menu-category__title">A la Parrilla</span>
+              <span class="menu-category__count">12 opciones</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-parrilla" role="region" aria-labelledby="tab-parrilla">
+            <div class="menu-category__panel-inner">
+              <div class="menu-subgroup">Parrilladas · para 2 personas (incluyen papa francesa, chorizo y cebollita asada)</div>
+              <ul class="menu-items">
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Sirloin</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$480</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Arrachera y Sirloin</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$549</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Arrachera</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$630</span></div>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Pechuga Asada Mariposa</p><p class="menu-item__desc">250 gr, chimichurri o natural, con ensalada, esquite y puré de papa.</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$219</span></div>
+                </li>
+              </ul>
+              <div class="menu-subgroup">Guarniciones</div>
+              <ul class="menu-items">
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Ensalada</p></div><div class="menu-item__price"><span class="menu-item__price-line">$50</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Arroz</p></div><div class="menu-item__price"><span class="menu-item__price-line">$49</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Frijoles</p></div><div class="menu-item__price"><span class="menu-item__price-line">$49</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Papas a la francesa</p></div><div class="menu-item__price"><span class="menu-item__price-line">$60</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Esquites</p></div><div class="menu-item__price"><span class="menu-item__price-line">$75</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Papa al horno</p></div><div class="menu-item__price"><span class="menu-item__price-line">$85</span></div></li>
+              </ul>
+              <div class="menu-subgroup">Cortes Nacionales · 350 gr, incluye 1 guarnición</div>
+              <ul class="menu-items">
+                <li class="menu-item">
+                  <div class="menu-item__info"><p class="menu-item__name">Rib Eye, T-Bone o New York</p></div>
+                  <div class="menu-item__price"><span class="menu-item__price-line">$349</span></div>
+                </li>
+              </ul>
+              <div class="menu-subgroup">Cortes Premium</div>
+              <ul class="menu-items">
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Rib Eye</p><p class="menu-item__desc">350 gr.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$465</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Arrachera</p><p class="menu-item__desc">350 gr, con cebollita asada y chiles toreados.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$369</span></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Pizza -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-pizza" id="tab-pizza">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">10</span>
+              <span class="menu-category__title">Pizza</span>
+              <span class="menu-category__count">7 sabores</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-pizza" role="region" aria-labelledby="tab-pizza">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Gozosa</p><p class="menu-item__desc">Jitomate y albahaca.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$160</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Pepperoni</p></div><div class="menu-item__price"><span class="menu-item__price-line">$180</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Hawaiana</p><p class="menu-item__desc">Jamón y piña.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$229</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Mexicana</p><p class="menu-item__desc">Chorizo, cebolla morada y jalapeño.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$229</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Casanova</p><p class="menu-item__desc">Champiñones, tocino, cilantro y crema.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$259</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Cochinita</p><p class="menu-item__desc">Cochinita y cebolla morada encurtida.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$285</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Chicharrón Rojo</p><p class="menu-item__desc">Salsa verde, queso asadero, chicharrón en salsa roja, frijoles de la olla, cilantro y cebolla.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$285</span></div></li>
+              </ul>
+              <div class="menu-subgroup">Vino de la casa</div>
+              <ul class="menu-items">
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Copa</p></div><div class="menu-item__price"><span class="menu-item__price-line">$95</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Botella</p></div><div class="menu-item__price"><span class="menu-item__price-line">$390</span></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Tortas -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-tortas" id="tab-tortas">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">11</span>
+              <span class="menu-category__title">Tortas</span>
+              <span class="menu-category__count">3 platillos</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-tortas" role="region" aria-labelledby="tab-tortas">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Betito, de Arrachera</p><p class="menu-item__desc">Queso asadero, cebollita asada, salsa de molcajete, aguacate y chicharrón durito. Servida con papas a la francesa.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$155</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Cochinita Pibil</p><p class="menu-item__desc">Frijoles negros, cebollita desflemada y aguacate. Servida con papas a la francesa.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$149</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Milanesa</p><p class="menu-item__desc">Queso asadero, mayonesa, lechuga, aguacate, jitomate, cebolla y chilitos en vinagre. Servida con papas a la francesa.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$125</span></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. Café -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-cafe" id="tab-cafe">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">12</span>
+              <span class="menu-category__title">Café</span>
+              <span class="menu-category__count">10 bebidas</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-cafe" role="region" aria-labelledby="tab-cafe">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Café de olla</p></div><div class="menu-item__price"><span class="menu-item__price-line">$45</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Té</p></div><div class="menu-item__price"><span class="menu-item__price-line">$45</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Chocolate caliente</p></div><div class="menu-item__price"><span class="menu-item__price-line">$49</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Café americano</p></div><div class="menu-item__price"><span class="menu-item__price-line">$55</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Espresso</p></div><div class="menu-item__price"><span class="menu-item__price-line">$55</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Latte</p></div><div class="menu-item__price"><span class="menu-item__price-line">$65</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Capuccino</p><p class="menu-item__desc">Moka, vainilla o cajeta.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$69</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Capuccino Frappe</p></div><div class="menu-item__price"><span class="menu-item__price-line">$75</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Malteada</p><p class="menu-item__desc">Chocolate, fresa o vainilla.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$75</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Carajillo</p><p class="menu-item__desc">Espresso y licor 43.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$165</span></div></li>
+              </ul>
+              <p class="menu-category__note">Pregunta por nuestro menú de desayunos, disponible sábado y domingo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. Postres -->
+        <div class="menu-category">
+          <h3 class="menu-category__h"><button class="menu-category__trigger" aria-expanded="false" aria-controls="panel-postres" id="tab-postres">
+            <span class="menu-category__heading">
+              <span class="menu-category__index">13</span>
+              <span class="menu-category__title">Postres</span>
+              <span class="menu-category__count">8 postres</span>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button></h3>
+          <div class="menu-category__panel" id="panel-postres" role="region" aria-labelledby="tab-postres">
+            <div class="menu-category__panel-inner">
+              <ul class="menu-items">
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Pay de Queso de Cabra</p><p class="menu-item__desc">Con ate de membrillo y raspadura de piloncillo.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$149</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Pay de Arroz con Leche</p><p class="menu-item__desc">Mermelada de jamaica de la casa.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$135</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Pan de Elote</p><p class="menu-item__desc">Libre de gluten, con helado y rompope.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$98</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Bollitos de Oreo</p><p class="menu-item__desc">Cajeta y fresa.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$98</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Plátanos Fritos</p><p class="menu-item__desc">Plátano macho, nieve de vainilla, cajeta y lechera.</p></div><div class="menu-item__price"><span class="menu-item__price-line"><small>Media orden</small>$65</span><span class="menu-item__price-line"><small>Orden</small>$105</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Buñuelos</p><p class="menu-item__desc">Rellenos de cajeta y queso crema.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$98</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Churros Tradicionales</p><p class="menu-item__desc">4 pzs, dip de dulce de leche, chocolate y lechera.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$149</span></div></li>
+                <li class="menu-item"><div class="menu-item__info"><p class="menu-item__name">Chocochurros</p><p class="menu-item__desc">2 pzs cubiertas de chocolate, sabor Baileys.</p></div><div class="menu-item__price"><span class="menu-item__price-line">$149</span></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu-cta" data-reveal>
+        <a class="btn btn--primary" href="https://wa.me/524442011280" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          <span>Reservar por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PROMOCIONES
+       ========================================================= -->
+  <section class="section section--crema" id="promociones">
+    <div class="container">
+      <div class="promo" data-reveal>
+        <div class="promo__media">
+          <picture>
+            <source type="image/webp" srcset="/assets/img/promo/promo-coctel-mural-480.webp 480w, /assets/img/promo/promo-coctel-mural-768.webp 768w, /assets/img/promo/promo-coctel-mural-1080.webp 1080w" sizes="100vw">
+            <img src="/assets/img/promo/promo-coctel-mural-1080.jpg" srcset="/assets/img/promo/promo-coctel-mural-480.jpg 480w, /assets/img/promo/promo-coctel-mural-768.jpg 768w, /assets/img/promo/promo-coctel-mural-1080.jpg 1080w" sizes="100vw" alt="Coctel de la casa con mural artístico de fondo en Gozosa" loading="lazy" decoding="async" width="1080" height="1350">
+          </picture>
+        </div>
+        <div class="promo__inner">
+          <span class="promo__badge" data-reveal>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px"><path d="M12 2l2.4 7.2H22l-6 4.6L18.4 22 12 17.3 5.6 22 8 13.8l-6-4.6h7.6z"/></svg>
+            Promoción todos los días
+          </span>
+          <p class="kicker on-dark">Promociones</p>
+          <h2>2x1 en destilados seleccionados</h2>
+          <p>Promociones todos los días. Aplican restricciones, pregunta por las vigentes.</p>
+          <a class="btn btn--gold" href="https://wa.me/524442011280" target="_blank" rel="noopener">Preguntar por la promo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       AMBIENTE
+       ========================================================= -->
+  <section class="section section--surface" id="ambiente">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker" data-reveal>Ambiente</p>
+        <h2 data-reveal>Ambiente familiar y música en vivo</h2>
+      </div>
+
+      <div class="ambiente-grid">
+        <div class="ambiente-card ambiente-grid__primary" data-reveal>
+          <picture>
+            <source type="image/webp" srcset="/assets/img/ambiente/ambiente-familia-480.webp 480w, /assets/img/ambiente/ambiente-familia-768.webp 768w, /assets/img/ambiente/ambiente-familia-1080.webp 1080w" sizes="(min-width: 768px) 55vw, 90vw">
+            <img src="/assets/img/ambiente/ambiente-familia-1080.jpg" srcset="/assets/img/ambiente/ambiente-familia-480.jpg 480w, /assets/img/ambiente/ambiente-familia-768.jpg 768w, /assets/img/ambiente/ambiente-familia-1080.jpg 1080w" sizes="(min-width: 768px) 55vw, 90vw" alt="Familia disfrutando una comida juntos en Gozosa" loading="lazy" decoding="async" width="1023" height="1279">
+          </picture>
+          <div class="ambiente-card__caption">
+            <strong>Para compartir en familia</strong>
+            <span>Mesas para toda ocasión</span>
+          </div>
+        </div>
+        <div class="ambiente-card ambiente-grid__secondary" data-reveal>
+          <picture>
+            <source type="image/webp" srcset="/assets/img/ambiente/ambiente-salon-fiesta-480.webp 480w, /assets/img/ambiente/ambiente-salon-fiesta-768.webp 768w, /assets/img/ambiente/ambiente-salon-fiesta-1080.webp 1080w" sizes="(min-width: 768px) 40vw, 90vw">
+            <img src="/assets/img/ambiente/ambiente-salon-fiesta-1080.jpg" srcset="/assets/img/ambiente/ambiente-salon-fiesta-480.jpg 480w, /assets/img/ambiente/ambiente-salon-fiesta-768.jpg 768w, /assets/img/ambiente/ambiente-salon-fiesta-1080.jpg 1080w" sizes="(min-width: 768px) 40vw, 90vw" alt="Pareja brindando con micrófonos frente al mural de Gozosa, ambiente de música en vivo" loading="lazy" decoding="async" width="955" height="1194">
+          </picture>
+          <div class="ambiente-card__caption">
+            <strong>Música en vivo</strong>
+            <span>Anima cada visita</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ambiente-text" data-reveal>
+        <p class="kicker">&nbsp;</p>
+        <p>Gozosa es más que buena comida: es el lugar para compartir en familia o con amigos, con música en vivo que acompaña cada visita.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       GALERÍA
+       ========================================================= -->
+  <section class="section section--crema" id="galeria">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker" data-reveal>Galería</p>
+        <h2 data-reveal>Un vistazo a Gozosa</h2>
+      </div>
+
+      <div class="gallery-grid" data-reveal-group>
+        <!-- Los 20 elementos siguientes reutilizan el patrón .gallery-item -->
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-cocteles-mesa-1080.jpg" aria-label="Ver imagen ampliada: tres cocteles de la casa en mesa de talavera">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-cocteles-mesa-480.webp"><img src="/assets/img/gallery/galeria-cocteles-mesa-480.jpg" alt="Tres cocteles de la casa servidos en una mesa de talavera" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-bartender-1080.jpg" aria-label="Ver imagen ampliada: bartender preparando un coctel">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-bartender-480.webp"><img src="/assets/img/gallery/galeria-bartender-480.jpg" alt="Bartender de Gozosa preparando un coctel en la barra" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-terraza-1080.jpg" aria-label="Ver imagen ampliada: pareja disfrutando un coctel en la terraza, con música en vivo">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-terraza-480.webp"><img src="/assets/img/gallery/galeria-terraza-480.jpg" alt="Pareja disfrutando un coctel en la terraza de Gozosa, con música en vivo de fondo" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-queso-fundido-1080.jpg" aria-label="Ver imagen ampliada: taco de pollo bañado en salsa">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-queso-fundido-480.webp"><img src="/assets/img/gallery/galeria-queso-fundido-480.jpg" alt="Taco de pollo bañado en salsa, con aguacate y queso" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-mojito-parrilla-1080.jpg" aria-label="Ver imagen ampliada: coctel de la casa con cortes a la parrilla de fondo">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-mojito-parrilla-480.webp"><img src="/assets/img/gallery/galeria-mojito-parrilla-480.jpg" alt="Coctel de la casa con maracuyá y menta, cortes a la parrilla de fondo" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-terraza-sombrillas-1080.jpg" aria-label="Ver imagen ampliada: brindis frente al mural artístico de Gozosa">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-terraza-sombrillas-480.webp"><img src="/assets/img/gallery/galeria-terraza-sombrillas-480.jpg" alt="Brindis con cocteles frente al mural artístico de Gozosa" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-comedor-interior-1080.jpg" aria-label="Ver imagen ampliada: brindis con cocteles al aire libre">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-comedor-interior-480.webp"><img src="/assets/img/gallery/galeria-comedor-interior-480.jpg" alt="Brindis con cocteles de la casa al aire libre" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-tostada-cochinita-1080.jpg" aria-label="Ver imagen ampliada: salón principal de Gozosa con papel picado">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-tostada-cochinita-480.webp"><img src="/assets/img/gallery/galeria-tostada-cochinita-480.jpg" alt="Salón principal de Gozosa decorado con papel picado colorido" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-brindis-mural-1080.jpg" aria-label="Ver imagen ampliada: brindis frente a un mural de corazón floral en Gozosa">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-brindis-mural-480.webp"><img src="/assets/img/gallery/galeria-brindis-mural-480.jpg" alt="Cocteles de la casa en brindis frente a un mural de corazón floral en Gozosa" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-manos-cielo-1080.jpg" aria-label="Ver imagen ampliada: enchiladas rojas con pollo y frijoles">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-manos-cielo-480.webp"><img src="/assets/img/gallery/galeria-manos-cielo-480.jpg" alt="Enchiladas rojas con pollo, frijoles negros y cebolla morada" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-tostada-cebolla-1080.jpg" aria-label="Ver imagen ampliada: chilaquiles rojos con pollo y cebolla morada">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-tostada-cebolla-480.webp"><img src="/assets/img/gallery/galeria-tostada-cebolla-480.jpg" alt="Chilaquiles rojos con pollo, frijoles negros y cebolla morada" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-plato-crema-1080.jpg" aria-label="Ver imagen ampliada: quesadilla de Gozosa con aguacate y salsa">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-plato-crema-480.webp"><img src="/assets/img/gallery/galeria-plato-crema-480.jpg" alt="Quesadilla de Gozosa con aguacate, cebolla morada y salsa" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-churros-postre-1080.jpg" aria-label="Ver imagen ampliada: postre de la casa con salsa de frutos rojos">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-churros-postre-480.webp"><img src="/assets/img/gallery/galeria-churros-postre-480.jpg" alt="Postre de la casa bañado en salsa de frutos rojos y chocolate" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-mural-corazon-1080.jpg" aria-label="Ver imagen ampliada: brindis con cocteles en el jardín de Gozosa">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-mural-corazon-480.webp"><img src="/assets/img/gallery/galeria-mural-corazon-480.jpg" alt="Brindis con cocteles de la casa en el jardín de Gozosa" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-latte-talavera-1080.jpg" aria-label="Ver imagen ampliada: cocteles de la casa en la terraza de Gozosa">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-latte-talavera-480.webp"><img src="/assets/img/gallery/galeria-latte-talavera-480.jpg" alt="Cocteles de la casa servidos en la terraza de Gozosa" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-coctel-papas-1080.jpg" aria-label="Ver imagen ampliada: milanesa gratinada con papas y un coctel de la casa">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-coctel-papas-480.webp"><img src="/assets/img/gallery/galeria-coctel-papas-480.jpg" alt="Milanesa gratinada con papas a la francesa y ensalada, junto a un coctel de la casa" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-coctel-papas-dos-1080.jpg" aria-label="Ver imagen ampliada: platillo de Gozosa bañado en salsa, con ensalada">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-coctel-papas-dos-480.webp"><img src="/assets/img/gallery/galeria-coctel-papas-dos-480.jpg" alt="Platillo de Gozosa bañado en salsa, acompañado de ensalada fresca" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-mojito-verde-1080.jpg" aria-label="Ver imagen ampliada: café con espuma en taza de la casa">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-mojito-verde-480.webp"><img src="/assets/img/gallery/galeria-mojito-verde-480.jpg" alt="Café con espuma servido en taza de la casa Gozosa" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-cafe-latte-art-1080.jpg" aria-label="Ver imagen ampliada: café con leche frente a un mural colorido">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-cafe-latte-art-480.webp"><img src="/assets/img/gallery/galeria-cafe-latte-art-480.jpg" alt="Café con leche servido en vaso, frente a un mural colorido de Gozosa" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+        <button class="gallery-item" data-reveal data-full="/assets/img/gallery/galeria-coctel-humo-1080.jpg" aria-label="Ver imagen ampliada: coctel con escarchado de chile en vaso bajo">
+          <picture><source type="image/webp" srcset="/assets/img/gallery/galeria-coctel-humo-480.webp"><img src="/assets/img/gallery/galeria-coctel-humo-480.jpg" alt="Coctel con escarchado de chile en vaso bajo" loading="lazy" decoding="async" width="800" height="1000"></picture>
+          <span class="gallery-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M3 16v3a2 2 0 002 2h3"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TESTIMONIOS — MOCK, sustituir por reseñas reales del cliente
+       ========================================================= -->
+  <!-- MOCK: testimonios de ejemplo; reemplazar por reseñas reales verificadas con el cliente -->
+  <section class="section section--surface">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker" data-reveal>Comensales</p>
+        <h2 data-reveal>Lo que se vive en Gozosa</h2>
+      </div>
+      <div class="testimonials" data-reveal-group>
+        <div class="testimonial" data-reveal>
+          <div class="testimonial__stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+          </div>
+          <p>"Venimos en familia casi cada fin de semana. Siempre hay música en vivo y el ambiente es increíble."</p>
+          <div class="testimonial__author">
+            <span class="testimonial__avatar" aria-hidden="true">C</span>
+            <span>Comensal</span>
+          </div>
+        </div>
+        <div class="testimonial" data-reveal>
+          <div class="testimonial__stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+          </div>
+          <p>"La parrillada para dos no decepciona, y el 2x1 en destilados es una excusa perfecta para quedarse."</p>
+          <div class="testimonial__author">
+            <span class="testimonial__avatar" aria-hidden="true">C</span>
+            <span>Comensal</span>
+          </div>
+        </div>
+        <div class="testimonial" data-reveal>
+          <div class="testimonial__stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.9 5.7 20.7l1.7-6.9L2 9.2l7.1-.6z"/></svg>
+          </div>
+          <p>"El mole con pollo es de lo mejor que he probado en San Luis Potosí."</p>
+          <div class="testimonial__author">
+            <span class="testimonial__avatar" aria-hidden="true">C</span>
+            <span>Comensal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CTA INTERMEDIO
+       ========================================================= -->
+  <section class="section section--rojo">
+    <div class="container cta-banner" data-reveal>
+      <h2>¿Ya se te antojó? Reserva tu mesa.</h2>
+      <a class="btn btn--gold" href="https://wa.me/524442011280" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        <span>Reservar por WhatsApp</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       UBICACIÓN Y HORARIO
+       ========================================================= -->
+  <section class="section section--crema" id="ubicacion">
+    <div class="container location">
+      <div class="location__details">
+        <p class="kicker" data-reveal>Ubicación</p>
+        <h2 data-reveal>Visítanos en Villa de Pozos</h2>
+        <p data-reveal style="color:var(--color-piedra); font-size:1.05rem; max-width:48ch;">En el corazón de Villa de Pozos, con mesas para toda ocasión y música en vivo que anima cada visita.</p>
+
+        <div class="location__list" data-reveal>
+          <div class="location__row">
+            <span class="location__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div>
+              <strong>Dirección</strong>
+              <address>C. Julián de los Reyes 348, Villa de Pozos, 78421 Pozos, S.L.P.</address>
+            </div>
+          </div>
+          <div class="location__row">
+            <span class="location__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <div>
+              <strong>Horario</strong>
+              <!--
+                VERIFICAR: el menú impreso del negocio muestra un horario distinto
+                (Lunes a Miércoles 12–23h, Jueves a Sábado 12–00h, Domingo 13–19h).
+                Se usa el horario indicado en el brief como fuente primaria.
+              -->
+              <p>Lunes a Miércoles 12:00–23:00<br>Jueves y Viernes 12:00–00:00<br>Sábado 9:00–00:00<br>Domingo 9:00–18:00</p>
+            </div>
+          </div>
+          <div class="location__row">
+            <span class="location__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></span>
+            <div>
+              <strong>WhatsApp</strong>
+              <p><a href="https://wa.me/524442011280" target="_blank" rel="noopener">+52 444 201 1280</a></p>
+            </div>
+          </div>
+        </div>
+
+        <a class="btn btn--primary" style="align-self:flex-start;" href="https://wa.me/524442011280" target="_blank" rel="noopener" data-reveal>Reservar por WhatsApp</a>
+      </div>
+
+      <div class="location__map" data-reveal>
+        <iframe
+          title="Ubicación de Gozosa en Villa de Pozos, San Luis Potosí"
+          src="https://maps.google.com/maps?q=C.+Juli%C3%A1n+de+los+Reyes+348%2C+Villa+de+Pozos%2C+78421+Pozos%2C+S.L.P.&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Mapa de Google con la ubicación de Gozosa">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CTA FINAL
+       ========================================================= -->
+  <section class="section section--dark">
+    <div class="container cta-banner" data-reveal>
+      <p class="kicker on-dark">Te esperamos</p>
+      <h2 style="color: var(--color-crema);">Ven a vivir Gozosa.</h2>
+      <a class="btn btn--primary" href="https://wa.me/524442011280" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        <span>Reservar por WhatsApp</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="site-footer" id="contacto">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p style="font-family:var(--font-display); font-weight:700; font-size:1.6rem; color:var(--color-oro); margin:0 0 var(--space-3);">Gozosa</p>
+        <p>Fonda mexicana fusión en Villa de Pozos, San Luis Potosí. Ambiente familiar, música en vivo y un menú extenso para cada ocasión.</p>
+        <div class="footer-mascot">
+          <span class="footer-mascot__badge" aria-hidden="true">
+            <!-- Guiño de marca: mascota "diablito" simplificada. Sustituir por el arte oficial del personaje cuando esté disponible. -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9c-1.5-2 0-5 2-4M18 9c1.5-2 0-5-2-4"/><circle cx="12" cy="12" r="7"/><path d="M9.5 11h.01M14.5 11h.01M9 15c1 1 5 1 6 0"/></svg>
+          </span>
+          <span>Con la chispa de siempre.</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <ul>
+          <li>
+            <a href="https://wa.me/524442011280" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+              <span>WhatsApp: +52 444 201 1280</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+524448242559">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <span>Tel: +52 444 824 2559</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:gozosafondaslp@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z" fill="none"/><path d="M22 6l-10 7L2 6"/></svg>
+              <span>gozosafondaslp@gmail.com</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Síguenos</h3>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/gozosaslp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              <span>@gozosaslp</span>
+            </a>
+          </li>
+          <li>
+            <!-- VERIFICAR: el menú impreso muestra el handle "gozosafonda" para Facebook; confirmar cuál está vigente -->
+            <a href="https://www.facebook.com/GozosaSLP" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <!-- Handle de TikTok no confirmado en el brief original -->
+            <a href="https://www.tiktok.com/@gozosaslp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+              <span>@gozosaslp</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#promociones">Promociones</a></li>
+          <li><a href="#ambiente">Ambiente</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Gozosa. Todos los derechos reservados.</span>
+      <address style="font-style:normal;">C. Julián de los Reyes 348, Villa de Pozos, 78421 Pozos, S.L.P.</address>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox de galería -->
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <button class="lightbox__close" aria-label="Cerrar imagen ampliada">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img src="" alt="">
+</div>
+
+<script src="/assets/js/main.js" defer></script>
 </body>
 </html>
